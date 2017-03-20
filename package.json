@@ -1,0 +1,25 @@
+{
+  "name": "sketchfetch",
+  "version": "0.0.0",
+  "description": "fetch-ish for Sketch",
+  "main": "lib/index.js",
+  "repository": "github.com/jongold/sketchfetch",
+  "author": "Jon Gold <hello@designedbygold.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel ./src --out-dir ./lib --ignore __tests__/*"
+  },
+  "dependencies": {
+    "fluture": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-airbnb": "^2.2.3",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
+    "eslint-plugin-react": "^6.9.0"
+  }
+}
