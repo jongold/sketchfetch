@@ -6,6 +6,7 @@ type URL = string;
 type Options = {
   method?: 'GET' | 'POST',
   headers?: { [key: string]: string },
+  body?: Object,
 };
 
 const defaultOptions = {
@@ -22,11 +23,18 @@ const makeRequest = (url: URL, options?: Options = {}) =>
       ...defaultOptions,
       ...options,
     };
-    // const data = NSString.alloc().initWithString(url).dataUsingEncoding(NSUTF8StringEncoding);
 
     const request = NSMutableURLRequest.requestWithURL(NSURL.URLWithString(url));
     request.setHTTPMethod(_options.method);
-    // request.setHTTPBody(data);
+
+    if (_options.method === 'POST' && _options.body) {
+      const stringified = JSON.stringify(_options.body);
+      const data = NSString.alloc()
+        .initWithString(stringified)
+        .dataUsingEncoding(NSUTF8StringEncoding);
+
+      request.setHTTPBody(data);
+    }
 
     Object.keys(_options.headers).forEach(header =>
       request.setValue_forHTTPHeaderField(_options.headers[header], header));

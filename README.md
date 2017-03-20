@@ -20,6 +20,5 @@ fetch('https://reqres.in/api/users').fork(
 - no time for that…
 
 ## TODOs
-- [ ] support POST w/ data
 - [ ] list out unsupported cases
 - [ ] switch to async requests
