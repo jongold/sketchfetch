@@ -1,6 +1,6 @@
 {
   "name": "sketchfetch",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "fetch-ish for Sketch",
   "main": "lib/index.js",
   "repository": "github.com/jongold/sketchfetch",
