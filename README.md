@@ -2,7 +2,7 @@
 
 ~= fetch for Sketch, using Futures
 
-```
+```js
 import fetch from 'sketchfetch';
 
 fetch('https://reqres.in/api/users').fork(
@@ -13,7 +13,6 @@ fetch('https://reqres.in/api/users').fork(
   }
 );
 ```
-
 
 ## Rationale
 - sketch's JS runtime doesn't support fetch or XMLHttpRequest so we can't use any normal polyfills
