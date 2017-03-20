@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "fetch-ish for Sketch",
   "main": "lib/index.js",
-  "repository": "github.com/jongold/sketchfetch",
+  "repository": "http://github.com/jongold/sketchfetch",
   "author": "Jon Gold <hello@designedbygold.com>",
   "license": "MIT",
   "files": [
