@@ -1,4 +1,7 @@
 # sketchfetch
+[![npm](https://img.shields.io/npm/v/sketchfetch.svg)](https://www.npmjs.com/package/sketchfetch)
+![Sketch.app](https://img.shields.io/badge/Sketch.app-43-brightgreen.svg)
+
 
 ~= fetch for Sketch, using Futures
 
