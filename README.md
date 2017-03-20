@@ -15,7 +15,18 @@ fetch('https://reqres.in/api/users').fork(
     log(res);
   }
 );
+// 'result!'
+// { data: […] }
+
+fetch('https://reqres.in/api/users', {
+  method: 'POST',
+  body: {
+    'name': 'Matthew McConaughey'
+  }
+}).fork…
 ```
+
+Remember to call `fork(err => err, result => result)` on the returned Future to run it!
 
 ## Rationale
 - sketch's JS runtime doesn't support fetch or XMLHttpRequest so we can't use any normal polyfills
