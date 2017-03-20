@@ -7,7 +7,9 @@
   "author": "Jon Gold <hello@designedbygold.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel ./src --out-dir ./lib --ignore __tests__/*"
+    "build": "babel ./src --out-dir ./lib --ignore __tests__/*",
+    "clean": "rimraf lib",
+    "prepublish": "npm run clean && npm run build"
   },
   "dependencies": {
     "fluture": "^5.0.0"
@@ -20,6 +22,7 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
-    "eslint-plugin-react": "^6.9.0"
+    "eslint-plugin-react": "^6.9.0",
+    "rimraf": "^2.6.1"
   }
 }
