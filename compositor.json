@@ -1,0 +1,95 @@
+{
+  "name": "jongold/sketchfetch",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "SketchFetch",
+  "branch": "",
+  "style": {
+    "name": "Brutalist",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BasicHeader",
+      "article": "article/MarkdownArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace",
+    "heading": {},
+    "typeScale": [
+      48,
+      32,
+      20,
+      18,
+      16,
+      14,
+      12
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "fluid": true
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/jongold/sketchfetch",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/sketchfetch",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "sketchfetch",
+      "subhead": "💎 fetch for sketch",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "sketchfetch: 💎 fetch for sketch",
+          "url": ""
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "jongold",
+          "repo": "sketchfetch"
+        }
+      ],
+      "text": "v1.0.2"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<p><a href=\"https://www.npmjs.com/package/sketchfetch\"><img src=\"https://img.shields.io/npm/v/sketchfetch.svg\"></a>\n<img src=\"https://img.shields.io/badge/Sketch.app-43-brightgreen.svg\"></p>\n<p>~= fetch for Sketch, using Futures</p>\n<pre><span class=\"hljs-keyword\">import</span> fetch <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;sketchfetch&apos;</span>;\n\nfetch(<span class=\"hljs-string\">&apos;https://reqres.in/api/users&apos;</span>).fork(\n  <span class=\"hljs-function\"><span class=\"hljs-params\">err</span> =&gt;</span> log(<span class=\"hljs-string\">&apos;error, fella&apos;</span>),\n  res =&gt; {\n    log(<span class=\"hljs-string\">&apos;result!&apos;</span>);\n    log(res);\n  }\n);\n<span class=\"hljs-comment\">// &apos;result!&apos;</span>\n<span class=\"hljs-comment\">// { data: [&#x2026;] }</span>\n\nfetch(<span class=\"hljs-string\">&apos;https://reqres.in/api/users&apos;</span>, {\n  <span class=\"hljs-attr\">method</span>: <span class=\"hljs-string\">&apos;POST&apos;</span>,\n  <span class=\"hljs-attr\">body</span>: {\n    <span class=\"hljs-string\">&apos;name&apos;</span>: <span class=\"hljs-string\">&apos;Matthew McConaughey&apos;</span>\n  }\n}).fork&#x2026;</pre><p>Remember to call <code>fork(err =&gt; err, result =&gt; result)</code> on the returned Future to run it!</p>\n<h2>Rationale</h2>\n<ul>\n<li>sketch&apos;s JS runtime doesn&apos;t support fetch or XMLHttpRequest so we can&apos;t use any normal polyfills</li>\n<li>NSURLConnections take a ton of code to set up</li>\n<li>no time for that&#x2026;</li>\n</ul>\n<h2>TODOs</h2>\n<ul>\n<li>[ ] list out unsupported cases</li>\n<li>[ ] switch to async requests</li>\n</ul>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/jongold/sketchfetch",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/jongold",
+          "text": "jongold"
+        }
+      ]
+    }
+  ]
+}
